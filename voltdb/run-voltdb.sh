@@ -12,30 +12,32 @@
 source voltdb-globals.sh
 
 # Change the following global variables based on your environment
-#-------------------------------------------------------------------------------
-EMON="/opt/intel/oneapi/vtune/2021.1.2/bin64/emon"
-RUNDIR="/users/hcli/proj/run"
-
+##-------------------------------------------------------------------------------
+EMON="/opt/intel/oneapi/vtune/2022.3.0/bin64/emon"
+## RUNDIR="/users/hcli/proj/run"
+RUNDIR="/scratchNVME/pond/Pond"
 # Output folder
 #RSTDIR="rst/emon-$(date +%F-%H%M)-$(uname -n | awk -F. '{printf("%s.%s\n", $1, $2)}')"
 MEMEATER="$RUNDIR/memeater"
 VOLTDB_RUN_DIR="$RUNDIR/voltdb"
-#RSTDIR="${VOLTDB_RUN_DIR}/rst/rst"
-RSTDIR="/tdata/VDB/voltdb-toplev-rst"
+RSTDIR="${VOLTDB_RUN_DIR}/rst/rst"
+# RSTDIR="/tdata/VDB/voltdb-toplev-rst"
 echo "==> Result directory: $RSTDIR"
 
-TOPLEVDIR=/users/hcli/git/pmu-tools
+TOPLEVDIR=/home/psafayen/pmu-tools
 TOPLEVCMD="sudo PERF=/users/hcli/bin/perf $TOPLEVDIR/toplev --all -v --no-desc -a sleep 60"
-DAMON="/users/hcli/git/damo/damo" # user-space tool
+DAMON="/home/psafayen/damo" # user-space tool
 
 RUN_TOPLEV=0
 RUN_EMON=0
 RUN_DAMON=0
 
 # The path of voltdb source code
-export VDB_SRC_DIR="/tdata/VDB/voltdb"
+# export VDB_SRC_DIR="/tdata/VDB/voltdb"
+export VDB_SRC_DIR="/scratchNVME/pond/Pond/voltdb/voltdb"
 # The database path, only needed for voltdb init
-export VDB_DB_DIR="/tdata/VDB/db"
+# export VDB_DB_DIR="/tdata/VDB/db"
+export VDB_SRC_DIR="/scratchNVME/pond/Pond/voltdb/voltdb"
 
 #-------------------------------------------------------------------------------
 

@@ -5,8 +5,8 @@
 # Huaicheng Li <lhcwhu@gmail.com>
 #
 
-source /users/hcli/proj/run/run-globals.sh
-
+# source /users/hcli/proj/run/run-globals.sh
+source run-globals.sh
 #-------------------------------------------------------------------------------
 
 get_sysinfo()
