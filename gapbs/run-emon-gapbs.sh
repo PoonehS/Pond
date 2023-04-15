@@ -5,7 +5,7 @@
 # Huaicheng Li <lhcwhu@gmail.com>
 #
 
-RUNDIR="/users/hcli/proj/run"
+RUNDIR="/bede-data/Pond/"
 
 # Output folder
 #RSTDIR="rst/emon-$(date +%F-%H%M)-$(uname -n | awk -F. '{printf("%s.%s\n", $1, $2)}')"
@@ -16,10 +16,10 @@ RSTDIR="/tdata/gapbs-emon2-all"
 echo "==> Result directory: $RSTDIR"
 
 # Needed by cmd.sh scripts
-export GAPBS_DIR="/users/hcli/git/gapbs"
-export GAPBS_GRAPH_DIR="/tdata/gapbs/benchmark/graphs"
-[[ ! -d "${GAPBS_DIR}" ]] && echo "${GAPBS_DIR} does not exist!" && exit
-[[ ! -d "${GAPBS_GRAPH_DIR}" ]] && echo "${GAPBS_GRAPH_DIR} does not exist!" && exit
+# export GAPBS_DIR="/users/hcli/git/gapbs"
+# export GAPBS_GRAPH_DIR="/tdata/gapbs/benchmark/graphs"
+# [[ ! -d "${GAPBS_DIR}" ]] && echo "${GAPBS_DIR} does not exist!" && exit
+# [[ ! -d "${GAPBS_GRAPH_DIR}" ]] && echo "${GAPBS_GRAPH_DIR} does not exist!" && exit
 
 # Source global functions
 source $RUNDIR/cxl-global.sh || exit

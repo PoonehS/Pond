@@ -10,7 +10,7 @@
 VTUNE="/opt/intel/oneapi/vtune/2021.1.2/bin64/vtune"
 EMON="/opt/intel/oneapi/vtune/2021.1.2/bin64/emon"
 VMTOUCH="/usr/bin/vmtouch"
-RUNDIR="/users/hcli/proj/run"
+RUNDIR="/bede-data/Pond/"
 DAMON="/users/hcli/git/damo/damo" # user-space tool
 TOPLEVDIR=/users/hcli/git/pmu-tools
 TOPLEVCMD="sudo PATH=/users/hcli/bin:$PATH $TOPLEVDIR/toplev -l6 -v --no-desc"
@@ -32,10 +32,10 @@ RUN_DAMON=0
 RUN_TOPLEV=0
 
 # GAPBS path, needed by cmd.sh scripts
-export GAPBS_DIR="/users/hcli/git/gapbs"
-export GAPBS_GRAPH_DIR="/tdata/gapbs/benchmark/graphs"
-[[ ! -d "${GAPBS_DIR}" ]] && echo "${GAPBS_DIR} does not exist!" && exit
-[[ ! -d "${GAPBS_GRAPH_DIR}" ]] && echo "${GAPBS_GRAPH_DIR} does not exist!" && exit
+# export GAPBS_DIR="/users/hcli/git/gapbs"
+# export GAPBS_GRAPH_DIR="/tdata/gapbs/benchmark/graphs"
+# [[ ! -d "${GAPBS_DIR}" ]] && echo "${GAPBS_DIR} does not exist!" && exit
+# [[ ! -d "${GAPBS_GRAPH_DIR}" ]] && echo "${GAPBS_GRAPH_DIR} does not exist!" && exit
 
 #-------------------------------------------------------------------------------
 

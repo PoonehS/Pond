@@ -2,7 +2,7 @@
 
 source voltdb-globals.sh
 
-VOLTDB_RUN_DIR="/users/hcli/proj/run/voltdb"
+VOLTDB_RUN_DIR="/bede-data/Pond//voltdb"
 
 cd ${YCSB_DIR}
 
